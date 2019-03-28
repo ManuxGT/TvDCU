@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.RangeBar = new System.Windows.Forms.TrackBar();
             this.Player = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -38,8 +39,11 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.NumCanal = new System.Windows.Forms.Label();
+            this.NombreCanal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RangeBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,7 +57,7 @@
             // 
             this.RangeBar.AccessibleDescription = "RangeBar";
             this.RangeBar.AccessibleName = "RangeBar";
-            this.RangeBar.Location = new System.Drawing.Point(721, 296);
+            this.RangeBar.Location = new System.Drawing.Point(846, 296);
             this.RangeBar.Maximum = 100;
             this.RangeBar.Name = "RangeBar";
             this.RangeBar.Size = new System.Drawing.Size(123, 45);
@@ -68,16 +72,26 @@
             // Player
             // 
             this.Player.Enabled = true;
-            this.Player.Location = new System.Drawing.Point(3, 0);
+            this.Player.Location = new System.Drawing.Point(27, 30);
             this.Player.Name = "Player";
             this.Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player.OcxState")));
-            this.Player.Size = new System.Drawing.Size(640, 452);
+            this.Player.Size = new System.Drawing.Size(679, 394);
             this.Player.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TvDCU.Properties.Resources.Borde_Pere_Jimene;
+            this.pictureBox4.Location = new System.Drawing.Point(22, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(689, 446);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::TvDCU.Properties.Resources.speaker_pere;
-            this.pictureBox6.Location = new System.Drawing.Point(667, 296);
+            this.pictureBox6.Location = new System.Drawing.Point(792, 296);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(48, 30);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,8 +100,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = global::TvDCU.Properties.Resources.VolumeDown;
-            this.pictureBox3.Location = new System.Drawing.Point(763, 202);
+            this.pictureBox3.Location = new System.Drawing.Point(892, 202);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,8 +112,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::TvDCU.Properties.Resources.VolumeUP;
-            this.pictureBox2.Location = new System.Drawing.Point(763, 131);
+            this.pictureBox2.Location = new System.Drawing.Point(892, 131);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,8 +124,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::TvDCU.Properties.Resources.ChannelDown;
-            this.pictureBox1.Location = new System.Drawing.Point(690, 202);
+            this.pictureBox1.Location = new System.Drawing.Point(807, 202);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,8 +136,9 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Image = global::TvDCU.Properties.Resources.ChannelUp;
-            this.pictureBox8.Location = new System.Drawing.Point(690, 131);
+            this.pictureBox8.Location = new System.Drawing.Point(807, 131);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +149,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::TvDCU.Properties.Resources.mute;
-            this.pictureBox7.Location = new System.Drawing.Point(794, 24);
+            this.pictureBox7.Location = new System.Drawing.Point(919, 40);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,8 +159,9 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::TvDCU.Properties.Resources.Turn;
-            this.pictureBox5.Location = new System.Drawing.Point(673, 30);
+            this.pictureBox5.Location = new System.Drawing.Point(768, 46);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,11 +169,32 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // NumCanal
+            // 
+            this.NumCanal.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumCanal.Location = new System.Drawing.Point(763, 395);
+            this.NumCanal.Name = "NumCanal";
+            this.NumCanal.Size = new System.Drawing.Size(226, 23);
+            this.NumCanal.TabIndex = 15;
+            this.NumCanal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // NombreCanal
+            // 
+            this.NombreCanal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreCanal.Location = new System.Drawing.Point(731, 418);
+            this.NombreCanal.Name = "NombreCanal";
+            this.NombreCanal.Size = new System.Drawing.Size(263, 23);
+            this.NombreCanal.TabIndex = 16;
+            this.NombreCanal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1006, 512);
+            this.Controls.Add(this.NombreCanal);
+            this.Controls.Add(this.NumCanal);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.RangeBar);
             this.Controls.Add(this.pictureBox3);
@@ -164,12 +204,15 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.Player);
+            this.Controls.Add(this.pictureBox4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "AXN Television";
             ((System.ComponentModel.ISupportInitialize)(this.RangeBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -193,6 +236,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         public System.Windows.Forms.TrackBar RangeBar;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label NumCanal;
+        private System.Windows.Forms.Label NombreCanal;
     }
 }
 

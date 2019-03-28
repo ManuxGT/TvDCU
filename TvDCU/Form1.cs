@@ -27,16 +27,22 @@ namespace TvDCU
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Canal!=0)
+            if (state)
             {
-                Canal--;
-                Player.URL = CanalesURL[Canal];
+                if (Canal != 0)
+                {
+                    Canal--;
+                    Player.URL = CanalesURL[Canal];
+                }
+                else if (Canal == 0)
+                {
+                    Canal = CanalesURL.Count - 1;
+                    Player.URL = CanalesURL[Canal];
+                    NumCanal.Text = "Canal " + Canal;
+                    NombreCanal.Text = Canales[Canal];
+                }
             }
-            else if (Canal==0)
-            {
-                Canal = CanalesURL.Count - 1;
-                Player.URL = CanalesURL[Canal];
-            }
+            
         }
 
         public void InicializarCanales()
@@ -61,26 +67,37 @@ namespace TvDCU
         {
             if (state)
             {
-                Player.Ctlcontrols.stop();
+                Player.URL = "";
             }
             else
             {
                 Player.URL =CanalesURL[Canal];
                 Player.Ctlcontrols.play();
+                NumCanal.Text = "Canal " + Canal;
+                NombreCanal.Text = Canales[Canal];
             }
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            if (Canal+1!=CanalesURL.Count)
+            if (state)
             {
-                Canal++;
-                Player.URL = CanalesURL[Canal];
-            }else if (Canal+1==CanalesURL.Count)
-            {
-                Canal = 0;
-                Player.URL = CanalesURL[Canal];
+                if (Canal + 1 != CanalesURL.Count)
+                {
+                    Canal++;
+                    Player.URL = CanalesURL[Canal];
+                    NumCanal.Text = "Canal " + Canal;
+                    NombreCanal.Text = Canales[Canal];
+                }
+                else if (Canal + 1 == CanalesURL.Count)
+                {
+                    Canal = 0;
+                    Player.URL = CanalesURL[Canal];
+                    NumCanal.Text = "Canal " + Canal;
+                    NombreCanal.Text = Canales[Canal];
+                }
             }
+            
         }
 
         private void ValorCambiado(object sender, EventArgs e)
@@ -97,24 +114,34 @@ namespace TvDCU
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
-            RangeBar.Value = 0;
+            if (state)
+            {
+                RangeBar.Value = 0;
+            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (RangeBar.Value+5<=100)
+            if (state)
             {
-                RangeBar.Value += 5;
+                if (RangeBar.Value + 5 <= 100)
+                {
+                    RangeBar.Value += 5;
+                }
             }
+           
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (RangeBar.Value-5>=0)
-            {
-                RangeBar.Value -=5;
+            if(state){
+                if (RangeBar.Value - 5 >= 0)
+                {
+                    RangeBar.Value -= 5;
+                }
             }
+            
         }
     }
 }
