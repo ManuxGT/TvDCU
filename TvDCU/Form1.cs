@@ -67,10 +67,12 @@ namespace TvDCU
         {
             if (state)
             {
+                state = false;
                 Player.URL = "";
             }
             else
             {
+                state = true;
                 Player.URL =CanalesURL[Canal];
                 Player.Ctlcontrols.play();
                 NumCanal.Text = "Canal " + Canal;
