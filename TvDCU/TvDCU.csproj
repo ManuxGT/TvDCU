@@ -126,5 +126,44 @@
   <ItemGroup>
     <None Include="Resources\Borde Pere Jimene.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controller-b-back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
