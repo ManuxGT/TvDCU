@@ -128,6 +128,15 @@
         lCAAAAs=
 </value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>
+En esta aplicación puedes ver diferentes canales de televisión y utilizar el control de la derecha para diferentes funciones.
+
+* Volumen: Para modificar el volumen puedes usar la barra debajo del televisor para subir o bajar el volumen. También puedes usar el par de botones con el ícono de speaker.
+
+* Canales: Para cambiar los canales puedes utilizar los botones de CH. También puedes utilizar los números y digitar el canal que quieras ver, una vez escribas el número del canal presiona la tecla OK. También hay un botón con un ícono de dos flechas hacia atrás con el que puedes volver al ultimo canal que visitaste.
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
